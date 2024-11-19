@@ -1,3 +1,8 @@
-//
-// Created by gapt2 on 19/11/2024.
-//
+#include "Ejercicio 1/Estructuras.h"
+
+int main(){
+
+    void ejercicio1();
+
+    return 0;
+}
