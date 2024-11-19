@@ -4,7 +4,7 @@ https://github.com/Gabriel28112005/Programacion_estructurada.git
 # Enunciado
 Recuerda que estos ejercicios están diseñados para C, no para C++, por lo que no incluyen características específicas de C++ como el operador new o la programación orientada a objetos.
 
-**1. Estructuras**
+1. Estructuras
 
 a. Constitución de una estructura
 
@@ -21,16 +21,16 @@ Crea un puntero a una estructura Estudiante e inicialízalo.
 e. Organización de la programación
 
 Escribe una pequeña aplicación que cree una lista de estudiantes utilizando la estructura Estudiante. Deberías ser capaz de añadir, ver y eliminar estudiantes de la lista.
-**2. Uniones**
+2. Uniones
 
 Define una unión que pueda almacenar un entero, un flotante o una cadena de caracteres. Crea una variable de esta unión y asigna diferentes tipos de valores para ver cómo se comporta.
-**3. Copia de estructuras**
+3. Copia de estructuras
 
 Escribe una función que tome una estructura Estudiante y devuelva una copia de la misma.
-**4. Creación de alias de tipos de estructuras**
+4. Creación de alias de tipos de estructuras
 
 Usa typedef para crear un alias para la estructura Estudiante.
-**5. Estructuras y funciones**
+5. Estructuras y funciones
 
 a. Pasar una estructura por valor como argumento
 
@@ -44,7 +44,7 @@ Modifica la función anterior para que tome una dirección a una estructura Estu
 d. De la programación funcional a la programación orientada a objetos
 
 Este es un concepto más de C++ que de C, pero puedes intentar imaginar cómo podrías organizar el código de la lista de estudiantes en términos de objetos y métodos en lugar de funciones y estructuras.
-Propuesta de Solución:
+# Propuesta de Solución:
 1. Estructuras
 
 a. Constitución de una estructura
@@ -54,24 +54,27 @@ struct Estudiante {
     int edad;
     float promedio;
 };
+
 b. Instanciación de estructuras
 
 struct Estudiante estudiante1;
 strcpy(estudiante1.nombre, "Juan");
 estudiante1.edad = 20;
 estudiante1.promedio = 9.5;
+
 c. Instanciación con el operador malloc
 
 struct Estudiante *estudiante2 = (struct Estudiante *) malloc(sizeof(struct Estudiante));
 strcpy(estudiante2->nombre, "Ana");
 estudiante2->edad = 22;
 estudiante2->promedio = 9.8;
+
 d. Punteros y estructuras
 
 struct Estudiante *punteroEst = &estudiante1;
 printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", punteroEst->nombre, punteroEst->edad, punteroEst->promedio);
-2. Uniones
 
+2. Uniones
 
 union Dato {
    int i;
@@ -93,7 +96,6 @@ Nota: El valor de las uniones se sobrescribe, sólo se puede acceder a la últim
 
 3. Copia de estructuras
 
-
 struct Estudiante copiarEstudiante(struct Estudiante est) {
     struct Estudiante nuevoEst;
     strcpy(nuevoEst.nombre, est.nombre);
@@ -101,8 +103,8 @@ struct Estudiante copiarEstudiante(struct Estudiante est) {
     nuevoEst.promedio = est.promedio;
     return nuevoEst;
 }
-4. Creación de alias de tipos de estructuras
 
+4. Creación de alias de tipos de estructuras
 
 typedef struct Estudiante Estudiante;
 
@@ -110,6 +112,7 @@ Estudiante estudiante3;
 strcpy(estudiante3.nombre, "Pedro");
 estudiante3.edad = 25;
 estudiante3.promedio = 9.7;
+
 5. Estructuras y funciones
 
 a. Pasar una estructura por valor como argumento
@@ -118,16 +121,19 @@ void imprimirEstudiante(Estudiante est) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
 }
 imprimirEstudiante(estudiante1);
+
 b. Pasar una estructura por referencia como argumento
 
 void modificarEstudiante(Estudiante *est) {
     est->edad = 30;
 }
 modificarEstudiante(&estudiante1);
+
 c. Pasar una estructura por dirección como argumento
 
 void imprimirEstudiante2(Estudiante *est) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est->nombre, est->edad, est->promedio);
 }
 imprimirEstudiante2(&estudiante1);
+
 Nota: Por favor, verifica la sintaxis y asegúrate de que la compilación sea exitosa, ya que los códigos proporcionados son fragmentos y es posible que debas incluir bibliotecas apropiadas o definir main() para probarlos.
