@@ -1,4 +1,4 @@
-# Programacion_estructurada
+# Gabriel_Pena_Programacion_estructurada
 https://github.com/Gabriel28112005/Programacion_estructurada.git
 
 # Enunciado
