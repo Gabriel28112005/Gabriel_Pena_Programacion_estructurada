@@ -21,16 +21,16 @@ Crea un puntero a una estructura Estudiante e inicialízalo.
 e. Organización de la programación
 
 Escribe una pequeña aplicación que cree una lista de estudiantes utilizando la estructura Estudiante. Deberías ser capaz de añadir, ver y eliminar estudiantes de la lista.
-*2. Uniones*
+**2. Uniones**
 
 Define una unión que pueda almacenar un entero, un flotante o una cadena de caracteres. Crea una variable de esta unión y asigna diferentes tipos de valores para ver cómo se comporta.
-*3. Copia de estructuras*
+**3. Copia de estructuras**
 
 Escribe una función que tome una estructura Estudiante y devuelva una copia de la misma.
-*4. Creación de alias de tipos de estructuras*
+**4. Creación de alias de tipos de estructuras**
 
 Usa typedef para crear un alias para la estructura Estudiante.
-5. Estructuras y funciones
+**5. Estructuras y funciones**
 
 a. Pasar una estructura por valor como argumento
 
