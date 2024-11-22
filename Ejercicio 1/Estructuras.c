@@ -1,34 +1,58 @@
+#include "Estructuras.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-void ejercicio1(){
-
 // 1.a) Constitución de una estructura
-    struct Estudiante{
-        char nombre[50];
-        int edad;
-        float promedio;
-    };
 
-// 1.b) Instanciación de estructuras
+    Estudiante crearEstudiante(char nombre[50], int edad, float promedio){
+        Estudiante estudiante;
+        strcpy(estudiante.nombre, nombre);
+        estudiante.edad = edad;
+        estudiante.promedio = promedio;
+        return estudiante;
+    }
 
-    struct Estudiante estudiante1;
-    strcpy(estudiante1.nombre,"Juan");
-    estudiante1.edad = 20;
-    estudiante1.promedio = 8.75;
-
-// 1.c) Instanciación con el operador malloc
-
-    struct Estudiante *estudiante2 = (struct Estudiante*)malloc(sizeof(struct Estudiante));
-    strcpy(estudiante2->nombre,"Maria");
-    estudiante2->edad = 22;
-    estudiante2->promedio = 9.5;
-
-// 1.d) Punteros y estructuras
+    Estudiante mostrarEstudiante(Estudiante estudiante){
+        printf("Nombre: %s, ", estudiante.nombre);
+        printf("Edad: %d, ", estudiante.edad);
+        printf("Promedio: %.2f\n", estudiante.promedio);
+        return estudiante;
+    }
 
 
+    //Ejercicio 3. Copia de estructuras
+    Estudiante copiarEstudiante(Estudiante est) {
+        Estudiante nuevoEst;
+        strcpy(nuevoEst.nombre, est.nombre);
+        nuevoEst.edad = est.edad;
+        nuevoEst.promedio = est.promedio;
+        return nuevoEst;
+    }
 
+    Estudiante eliminarEstudiante(Estudiante est){
+        strcpy(est.nombre, "");
+        est.edad = 0;
+        est.promedio = 0;
+        return est;
+    }
 
+    Estudiante obtenerEstudiante(Estudiante est){
+        return est;
+    }
 
-}
+    Estudiante modificarEstudiante(Estudiante est, char nombre[50], int edad, float promedio){
+        strcpy(est.nombre, nombre);
+        est.edad = edad;
+        est.promedio = promedio;
+        return est;
+    }
+
+    Estudiante buscarEstudiante(Estudiante est, char nombre[50]){
+        if(strcmp(est.nombre, nombre) == 0){
+            return est;
+        }
+        else{
+            printf("No se ha encontrado al estudiante\n");
+        }
+    }
